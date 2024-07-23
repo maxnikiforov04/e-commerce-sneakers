@@ -1,9 +1,11 @@
-import { Header } from '../../../widgets/Landing'
+import { ThemeSwitcher } from "../../../shared";
+import { Header } from "../../../widgets/Landing";
 
 export const Landing = () => {
-	return (
-		<>
-			<Header/>
-		</>
-	)
-}
+  return (
+    <>
+      <Header />
+      <ThemeSwitcher />
+    </>
+  );
+};
