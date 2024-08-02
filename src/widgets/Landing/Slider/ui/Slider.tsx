@@ -5,6 +5,7 @@ import "swiper/css/pagination";
 export const Slider = () => {
   return (
     <section>
+      <div></div>
       <Swiper
         className="h-[760px] "
         modules={[Pagination, A11y]}
