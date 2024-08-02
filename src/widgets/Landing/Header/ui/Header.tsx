@@ -1,6 +1,6 @@
 export const Header = () => {
   return (
-    <header className="w-full flex h-32">
+    <header className="w-full flex h-28">
       <div className="w-1/6 h-full cursor-pointer flex items-center justify-center">
         <img src="/Header/logo.svg" alt="logo" />
       </div>
@@ -9,11 +9,15 @@ export const Header = () => {
           className="h-full flex items-center justify-between font-inter
           font-bold w-2/3 text-2xl"
         >
-          <ul className="cursor-pointer">New arrivals</ul>
-          <ul className="cursor-pointer">Men</ul>
-          <ul className="cursor-pointer">Women</ul>
-          <ul className="cursor-pointer">Kids</ul>
-          <ul className="cursor-pointer">Collection</ul>
+          <ul className="cursor-pointer no-underline hover:underline">
+            New arrivals
+          </ul>
+          <ul className="cursor-pointer no-underline hover:underline">Men</ul>
+          <ul className="cursor-pointer no-underline hover:underline">Women</ul>
+          <ul className="cursor-pointer no-underline hover:underline">Kids</ul>
+          <ul className="cursor-pointer no-underline hover:underline">
+            Collection
+          </ul>
         </nav>
       </div>
       <div className="flex h-full w-1/6 items-center justify-center">

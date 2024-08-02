@@ -1,0 +1,82 @@
+{
+	"products": [
+		{
+			"name": "Air Jordan 1 Retro Low Voodoo",
+			"category": "Men’s shoes",
+			"price": "379,99",
+			"imageUrl": "/Products/img1.png"
+		},
+		{
+			"name": "Dunk Low Active Fuchsia",
+			"category": "Women’s shoes",
+			"price": "169,99",
+			"imageUrl": "/Products/img2.png"
+		},
+		{
+			"name": "Dunk Low Black White",
+			"category": "Unisex shoes",
+			"price": "144,99",
+			"imageUrl": "/Products/img3.png"
+		},
+		{
+			"name": "Package Lightweight Jacket",
+			"category": "Unisex jacket",
+			"price": "104,99",
+			"imageUrl": "/Products/img4.png"
+		},
+		{
+			"name": "Nocta",
+			"category": "Unisex jacket",
+			"price": "129,99",
+			"imageUrl": "/Products/img5.png"
+		},
+		{
+			"name": "Air Jordan Retro Low Quai 54",
+			"category": "Men’s shoes",
+			"price": "169,99",
+			"imageUrl": "/Products/img6.png"
+		},
+		{
+			"name": "Nike Star Runner",
+			"category": "Women’s shoes",
+			"price": "54,99",
+			"imageUrl": "/Products/img7.png"
+		},
+		{
+			"name": "Nike Pegasus 40 SE",
+			"category": "Men’s shoes",
+			"price": "129,99",
+			"imageUrl": "/Products/img8.png"
+		},
+		{
+			"name": "Nike Swoosh High Support",
+			"category": "Women’s Sports Bra - 3 Colors",
+			"price": "59,99",
+			"imageUrl": "/Products/img9.png"
+		},
+		{
+			"name": "Dunk Low 85 Neptune Green",
+			"category": "Men’s shoes",
+			"price": "164,99",
+			"imageUrl": "/Products/img10.png"
+		},
+		{
+			"name": "Nike Sportswear Club+",
+			"category": "Big Kid's Sweatshirt - 4 Colors",
+			"price": "44,99",
+			"imageUrl": "/Products/img11.svg"
+		},
+		{
+			"name": "Nike Dri-FIT Club",
+			"category": "Unstructured Swoosh Cap",
+			"price": "29,99",
+			"imageUrl": "/Products/img12.png"
+		},
+		{
+			"name": "Nike Dri-FIT Club",
+			"category": "Unstructured Swoosh Cap",
+			"price": "29,99",
+			"imageUrl": "/Products/img12.png"
+		}
+	]
+}

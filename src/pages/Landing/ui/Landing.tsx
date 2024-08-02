@@ -1,11 +1,15 @@
 import { ThemeSwitcher } from "../../../shared";
-import { Header } from "../../../widgets/Landing";
+import { Coupon, Header, Slider } from "../../../widgets/Landing";
+import { NewProducts } from "../../../widgets/NewProducts";
 
 export const Landing = () => {
   return (
-    <>
+    <div>
       <Header />
+      <Coupon />
+      <Slider />
+      <NewProducts />
       <ThemeSwitcher />
-    </>
+    </div>
   );
 };
