@@ -52,30 +52,29 @@ export const NewProducts = () => {
         <div className="flex items-center">
           <div className="font-anton text-6xl ">NEW ARRIVALS</div>
           <div
-            className="prev-arrow w-[60px] h-full ml-12 rounded-full cursor-pointer
-            border-2 border-black text-4xl text-center flex items-center justify-center"
+            className="prev-arrow w-[60px] h-full ml-6 rounded-full cursor-pointer
+            border-2 border-gray-400 text-4xl text-center flex items-center justify-center"
             onClick={handlePrev}
           >
             <img src="/buttons/leftArrow.svg" alt="previos product" />
           </div>
 
           <div
-            className="next-arrow w-[60px] h-full ml-12 rounded-full
-            cursor-pointer border-2 border-black text-4xl flex items-center justify-center"
+            className="next-arrow w-[60px] h-full ml-6 rounded-full
+            cursor-pointer border-2 border-gray-400 text-4xl flex items-center justify-center"
             onClick={handleNext}
           >
             <img src="/buttons/rightArrow.svg" alt="next product" />
           </div>
         </div>
 
-        <div className="font-inter text-xl underline underline-offset-2 font-bold flex items-center">
+        <div className="font-inter text-xl underline underline-offset-2 font-bold flex items-center cursor-pointer">
           See all items
         </div>
       </div>
       <div className="items mt-20">
         <Swiper
           ref={sliderRef}
-          className="h-[760px] w-full"
           modules={[Pagination, A11y, Navigation]}
           spaceBetween={50}
           navigation={true}

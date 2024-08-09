@@ -19,7 +19,16 @@ export default {
       white: "#FFFFFF",
       productGrey: "#F6F6F6",
     },
-    extend: {},
+    extend: {
+      colors: {
+        txtColor: "#151414",
+      },
+      backgroundImage: {
+        mens: "url('/Collections/mens.svg')",
+        womens: "url('/Collections/womens.svg')",
+        kids: "url('/Collections/kids.svg')",
+      },
+    },
   },
   plugins: [],
 };

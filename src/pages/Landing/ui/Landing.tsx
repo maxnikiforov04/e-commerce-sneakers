@@ -1,5 +1,12 @@
 import { ThemeSwitcher } from "../../../shared";
-import { Coupon, Header, Slider } from "../../../widgets/Landing";
+import {
+  Collections,
+  Coupon,
+  Header,
+  NewCollections,
+  Slider,
+  Sport,
+} from "../../../widgets/Landing";
 import { NewProducts } from "../../../widgets/NewProducts";
 
 export const Landing = () => {
@@ -9,6 +16,9 @@ export const Landing = () => {
       <Coupon />
       <Slider />
       <NewProducts />
+      <Collections />
+      <NewCollections />
+      <Sport />
       <ThemeSwitcher />
     </div>
   );
