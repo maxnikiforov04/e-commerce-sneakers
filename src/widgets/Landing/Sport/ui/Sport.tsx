@@ -1,9 +1,34 @@
-import { useCallback, useRef } from "react";
+import axios from "axios";
+import { useCallback, useRef, useEffect, useState, Suspense } from "react";
 import { A11y, Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import SportCategory from "../../../../shared/SportCategory/SportCategory";
+
+type Category = {
+  name: string;
+  image: string;
+  itemsQuant: string;
+};
+
+async function fetchCategories() {
+  try {
+    const url = "http://localhost:3000/categories";
+    const response = await axios.get<Category[]>(url);
+    console.log(response.data);
+    return response.data;
+  } catch (err) {
+    console.log(err);
+    return [];
+  }
+}
+
+function Loading() {
+  return <div></div>;
+}
 
 export const Sport = () => {
-  const sliderRef = useRef(null);
+  const [categories, setCategories] = useState<Category[] | []>([]);
+  const sliderRef = useRef<SwiperRef>(null);
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slidePrev();
@@ -12,6 +37,13 @@ export const Sport = () => {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slideNext();
   }, []);
+  useEffect(() => {
+    (async () => {
+      const categories = await fetchCategories();
+      setCategories(categories);
+    })();
+  }, []);
+
   return (
     <section className="ml-20 mr-20 mt-28">
       <div className="flex">
@@ -35,19 +67,28 @@ export const Sport = () => {
         </div>
       </div>
       <div className="items mt-20">
-        <Swiper
-          ref={sliderRef}
-          modules={[Pagination, A11y, Navigation]}
-          spaceBetween={0}
-          navigation={true}
-          slidesPerView={3}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
-        >
-          <SwiperSlide></SwiperSlide>
-          <SwiperSlide></SwiperSlide>
-          <SwiperSlide></SwiperSlide>
-        </Swiper>
+        <Suspense fallback={<Loading />}>
+          <Swiper
+            ref={sliderRef}
+            className="w-full"
+            modules={[Pagination, A11y, Navigation]}
+            spaceBetween={50}
+            navigation={true}
+            slidesPerView={3}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+          >
+            {categories.map((category: Category) => (
+              <SwiperSlide>
+                <SportCategory
+                  name={category.name}
+                  image={category.image}
+                  itemsQuant={category.itemsQuant}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Suspense>
       </div>
     </section>
   );

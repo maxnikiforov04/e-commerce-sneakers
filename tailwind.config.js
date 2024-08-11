@@ -18,6 +18,8 @@ export default {
       sliderYellow: "#E5BE67",
       white: "#FFFFFF",
       productGrey: "#F6F6F6",
+      descGreen: "rgba(171, 187, 112, 0.2)",
+      couponOrange: "#E5BE67",
     },
     extend: {
       colors: {

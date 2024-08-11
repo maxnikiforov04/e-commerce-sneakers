@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { A11y, Pagination, Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { ProductCard } from "../../../shared/ProductCard/ui/ProductCard.tsx";
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import { ProductCard } from "../../../../shared/ProductCard/ui/ProductCard";
 
 type Product = {
   name: string;
@@ -11,14 +11,10 @@ type Product = {
   category: string;
 };
 
-type ProductList = {
-  products: Product[];
-};
-
 async function getProductList() {
   try {
     const url = "http://localhost:3000/products";
-    const response = await axios.get<ProductList>(url);
+    const response = await axios.get<Product[]>(url);
     return response.data;
   } catch (err) {
     console.log(err);
@@ -29,7 +25,7 @@ async function getProductList() {
 export const NewProducts = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [productList, setProductList] = useState<[] | Product[]>([]);
-  const sliderRef = useRef(null);
+  const sliderRef = useRef<SwiperRef>(null);
   useEffect(() => {
     (async () => {
       const products = await getProductList();

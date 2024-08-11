@@ -6,8 +6,10 @@ import {
   NewCollections,
   Slider,
   Sport,
+  NewProducts,
+  Description,
+  OrangeCoupon,
 } from "../../../widgets/Landing";
-import { NewProducts } from "../../../widgets/NewProducts";
 
 export const Landing = () => {
   return (
@@ -20,6 +22,8 @@ export const Landing = () => {
       <NewCollections />
       <Sport />
       <ThemeSwitcher />
+      <Description />
+      <OrangeCoupon />
     </div>
   );
 };
