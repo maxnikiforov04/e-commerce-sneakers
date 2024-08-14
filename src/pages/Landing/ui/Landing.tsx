@@ -1,4 +1,5 @@
 import { ThemeSwitcher } from "../../../shared";
+import { ClothCategory } from "../../../widgets/Landing/ClothCategory/ClothCategory";
 import {
   Collections,
   Coupon,
@@ -24,6 +25,7 @@ export const Landing = () => {
       <ThemeSwitcher />
       <Description />
       <OrangeCoupon />
+      <ClothCategory />
     </div>
   );
 };

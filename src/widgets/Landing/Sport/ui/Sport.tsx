@@ -12,7 +12,7 @@ type Category = {
 
 async function fetchCategories() {
   try {
-    const url = "http://localhost:3000/categories";
+    const url = "http://localhost:3000/categoriesSport";
     const response = await axios.get<Category[]>(url);
     console.log(response.data);
     return response.data;

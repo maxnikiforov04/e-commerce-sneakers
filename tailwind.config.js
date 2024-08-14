@@ -24,6 +24,7 @@ export default {
     extend: {
       colors: {
         txtColor: "#151414",
+        greytxt: "#827070",
       },
       backgroundImage: {
         mens: "url('/Collections/mens.svg')",
