@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <section className="bg-footerBg text-xl text-footerTxt">
+    <footer className="bg-footerBg text-xl text-footerTxt">
       <div className="flex justify-between mr-20 ml-20 pt-28 pb-28 leading-loose">
         <div className="font-anton text-4xl text-white leading-normal">
           <div>FIND A STORE</div>
@@ -33,16 +33,16 @@ export const Footer = () => {
         <div>
           <div className="font-anton text-white text-4xl">SOCIAL</div>
           <div className="flex justify-between mt-3">
-            <div>
+            <div className="cursor-pointer">
               <img src="/Footer/facebook.svg" alt="" />
             </div>
-            <div>
+            <div className="cursor-pointer">
               <img src="/Footer/insta.svg" alt="" />
             </div>
-            <div>
+            <div className="cursor-pointer">
               <img src="/Footer/twitter.svg" alt="" />
             </div>
-            <div>
+            <div className="cursor-pointer">
               <img src="/Footer/youtube.svg" alt="" />
             </div>
           </div>
@@ -60,6 +60,6 @@ export const Footer = () => {
         <div className="cursor-pointer">Privacy & Cookie Policy</div>
         <div className="cursor-pointer">Cookie Settings</div>
       </div>
-    </section>
+    </footer>
   );
 };

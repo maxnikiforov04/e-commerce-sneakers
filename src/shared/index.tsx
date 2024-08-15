@@ -1,3 +1,5 @@
 import { ThemeSwitcher } from "./ThemeSwitcher/ui/ThemeSwitcher.tsx";
 import SportCategory from "./SportCategory/SportCategory.tsx";
-export { ThemeSwitcher, SportCategory };
+import { Footer } from "./Footer/ui/Footer";
+import { Header } from "./Header/ui/Header";
+export { ThemeSwitcher, SportCategory, Footer, Header };

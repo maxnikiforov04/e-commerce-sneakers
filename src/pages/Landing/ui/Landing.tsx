@@ -1,21 +1,19 @@
-import { ThemeSwitcher } from "../../../shared";
+import { ThemeSwitcher, Header, Footer } from "../../../shared";
 import { ClothCategory } from "../../../widgets/Landing/ClothCategory/ClothCategory";
 import {
   Collections,
   Coupon,
-  Header,
   NewCollections,
   Slider,
   Sport,
   NewProducts,
   Description,
   OrangeCoupon,
-  Footer,
 } from "../../../widgets/Landing";
 
 export const Landing = () => {
   return (
-    <div>
+    <>
       <Header />
       <Coupon />
       <Slider />
@@ -28,6 +26,6 @@ export const Landing = () => {
       <OrangeCoupon />
       <ClothCategory />
       <Footer />
-    </div>
+    </>
   );
 };
