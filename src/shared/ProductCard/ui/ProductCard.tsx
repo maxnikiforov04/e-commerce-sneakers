@@ -12,7 +12,7 @@ export const ProductCard = ({
   category,
 }: ProductCard) => {
   return (
-    <div className="w-[390px] h-[525px] ">
+    <div className="w-full ">
       <div className="w-full h-[390px] flex items-center justify-center bg-productGrey cursor-pointer">
         <img src={imageUrl} alt="sneaker" />
       </div>

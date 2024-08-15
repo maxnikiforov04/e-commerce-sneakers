@@ -10,6 +10,7 @@ import {
   NewProducts,
   Description,
   OrangeCoupon,
+  Footer,
 } from "../../../widgets/Landing";
 
 export const Landing = () => {
@@ -26,6 +27,7 @@ export const Landing = () => {
       <Description />
       <OrangeCoupon />
       <ClothCategory />
+      <Footer />
     </div>
   );
 };

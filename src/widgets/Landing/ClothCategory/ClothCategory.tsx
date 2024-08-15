@@ -1,7 +1,7 @@
 export const ClothCategory = () => {
   return (
     <section className=" text-greytxt">
-      <div className="flex justify-between font-inter text-2xl mr-20 ml-20 mt-28 mb-28">
+      <div className="flex justify-center gap-x-48 font-inter text-2xl mr-20 ml-20 mt-28 mb-28">
         <div className="leading-loose">
           <div className="font-anton text-4xl text-txtColor">SHOES</div>
           <div className="category cursor-pointer">Golf Shoes</div>

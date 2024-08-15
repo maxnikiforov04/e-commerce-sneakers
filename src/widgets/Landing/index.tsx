@@ -8,6 +8,7 @@ import { NewProducts } from "./NewProducts/ui/NewProducts";
 import { Description } from "./Descroption/ui/Description";
 import { OrangeCoupon } from "./OrangeCoupon/ui/OrangeCoupon";
 import { ClothCategory } from "./ClothCategory/ClothCategory";
+import { Footer } from "./Footer/ui/Footer";
 
 export {
   Header,
@@ -20,4 +21,5 @@ export {
   Description,
   OrangeCoupon,
   ClothCategory,
+  Footer,
 };

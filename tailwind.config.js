@@ -20,11 +20,13 @@ export default {
       productGrey: "#F6F6F6",
       descGreen: "rgba(171, 187, 112, 0.2)",
       couponOrange: "#E5BE67",
+      footerBg: "#151414",
     },
     extend: {
       colors: {
         txtColor: "#151414",
         greytxt: "#827070",
+        footerTxt: "#CAC2C2",
       },
       backgroundImage: {
         mens: "url('/Collections/mens.svg')",
