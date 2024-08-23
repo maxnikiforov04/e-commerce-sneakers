@@ -1,4 +1,7 @@
+import { redirect } from "react-router-dom";
+
 export const Header = () => {
+  
   return (
     <header className="w-full flex h-28">
       <div className="w-1/6 h-full cursor-pointer flex items-center justify-center">
