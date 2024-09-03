@@ -1,9 +1,9 @@
 export function SortingBar() {
   return (
-    <section>
+    <section className="ml-20 mr-20 mt-10">
       <div>
-        <div>
-          <select className="select select-bordered select-lg w-full max-w-xs">
+        <div className="flex gap-x-8 ">
+          <select className="select select-bordered select-lg w-full max-w-xs rounded-none border-4 border-black">
             <option disabled selected>
               Gender
             </option>
@@ -11,16 +11,19 @@ export function SortingBar() {
             <option>women</option>
             <option>unisex</option>
           </select>
-          <select className="select select-bordered select-lg w-full max-w-xs">
+          <select className="select select-bordered select-lg w-full max-w-xs rounded-none border-4 border-black">
             <option disabled selected>
               Category
             </option>
             <option>cloth</option>
             <option>shoes</option>
           </select>
-          <div>Product type</div>
-          <div>Size</div>
-          <div>Price</div>
+          <select className="select select-bordered select-lg w-full max-w-xs rounded-none border-4 border-black">
+            <option disabled selected>
+              Price
+            </option>
+            <option>15$-20$</option>
+          </select>
           <div>Color</div>
           <div>More filters</div>
         </div>
