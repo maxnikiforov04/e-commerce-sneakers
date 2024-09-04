@@ -1,15 +1,9 @@
 import axios from "axios";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import { A11y, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import type { Product } from "../../../../entities/Product/model/Product.tsx";
 import { ProductCard } from "../../../../shared/ProductCard/ui/ProductCard";
-
-type Product = {
-  name: string;
-  imageUrl: string;
-  price: number;
-  category: string;
-};
 
 async function getProductList() {
   try {
@@ -78,17 +72,19 @@ export const NewProducts = () => {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
-          {!isLoading &&
-            productList.map((product: Product) => (
-              <SwiperSlide>
-                <ProductCard
-                  name={product.name}
-                  imageUrl={product.imageUrl}
-                  category={product.category}
-                  price={product.price}
-                />
-              </SwiperSlide>
-            ))}
+          <Suspense fallback={<div>loading</div>}>
+            {!isLoading &&
+              productList.map((product: Product) => (
+                <SwiperSlide>
+                  <ProductCard
+                    name={product.name}
+                    imageUrl={product.imageUrl}
+                    category={product.category}
+                    price={product.price}
+                  />
+                </SwiperSlide>
+              ))}
+          </Suspense>
         </Swiper>
       </div>
     </section>

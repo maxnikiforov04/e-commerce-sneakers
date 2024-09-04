@@ -1,4 +1,27 @@
+import axios from "axios";
+import { Suspense, useEffect, useState } from "react";
+import type { Product } from "../../../../entities/Product";
+import { ProductCard } from "../../../../shared/ProductCard/ui/ProductCard.tsx";
+
+async function fetchProducts(url: string) {
+  try {
+    const response = await axios.get<Product>(url);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+}
 export function SortingBar() {
+  const [productList, setProductList] = useState<[] | Product[]>([]);
+  useEffect(() => {
+    (async () => {
+      const products = await fetchProducts("http://localhost:3000/products");
+      setProductList(products);
+    })();
+    return () => {};
+  }, []);
+
   return (
     <section className="ml-20 mr-20 mt-10">
       <div>
@@ -22,13 +45,26 @@ export function SortingBar() {
             <option disabled selected>
               Price
             </option>
-            <option>15$-20$</option>
+            <option>under 15$</option>
+            <option>15$-30$</option>
+            <option>more than 30$</option>
           </select>
-          <div>Color</div>
-          <div>More filters</div>
         </div>
-        <div>
-          <div></div>
+        <div className="mt-20 mb-20 ">
+          <div className="grid gap-20 grid-cols-4">
+            <Suspense fallback={<div className="h-screen">Loading...</div>}>
+              {productList.map((product: Product) => (
+                <div>
+                  <ProductCard
+                    name={product.name}
+                    imageUrl={product.imageUrl}
+                    category={product.category}
+                    price={product.price}
+                  />
+                </div>
+              ))}
+            </Suspense>
+          </div>
         </div>
       </div>
     </section>

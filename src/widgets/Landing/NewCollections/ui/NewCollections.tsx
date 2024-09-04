@@ -1,14 +1,14 @@
 export const NewCollections = () => {
   return (
-    <section className="ml-20 mr-20 mt-28 text-txtColor">
+    <section className="lg:ml-20 lg:mr-20 mt-28 text-txtColor">
       <div className="font-anton text-6xl ">OUR NEW COLLECTION</div>
-      <div className="flex mt-20">
-        <div className="w-1/2">
+      <div className="lg:flex mt-20">
+        <div className="lg:w-1/2">
           <div>
             <img
               src="/NewCollections/spaceJame.svg"
               alt=""
-              className="w-[95%]"
+              className="lg:w-[95%] w-full"
             />
             <div className="mt-8">
               <div className="font-anton text-4xl">
@@ -24,14 +24,14 @@ export const NewCollections = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="lg:w-1/2">
           <div className="ml-auto">
             <img
               src="/NewCollections/blackHistory.svg"
               alt=""
-              className="w-[95%] ml-auto "
+              className="lg:w-[95%] w-full lg:ml-auto "
             />
-            <div className="w-[95%] ml-auto mt-8">
+            <div className="w-[95%] lg:ml-auto mt-8">
               <div className="font-anton text-4xl">
                 NIKE BLACK HISTORY MONTH
               </div>
